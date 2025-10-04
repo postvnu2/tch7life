@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>tch7 - All-in-One School Management Platform</title>
+    <meta name="description" content="tch7 provides a complete SaaS solution for schools, including custom websites, dedicated mobile apps, and role-based logins for students, parents, teachers, staff, and administration.">
+    <meta name="keywords" content="school management software, saas for schools, student information system, parent portal, teacher app, school administration, tch7">
+    <meta name="author" content="tch7">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS and Tailwind Config -->
+    <style>
+        /* Custom Styles and Animations */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* A light gray background */
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-bg {
+             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+             background-size: cover;
+             background-position: center;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating-illustration {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Scroll-triggered Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tab styling for roles section */
+        .tab-button.active {
+            border-color: #4f46e5;
+            color: #4f46e5;
+            background-color: #e0e7ff;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header id="header" class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-indigo-600">
+                    <a href="#home">tch7</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-indigo-600 transition">Home</a>
+                    <a href="#features" class="text-gray-600 hover:text-indigo-600 transition">Features</a>
+                    <a href="#roles" class="text-gray-600 hover:text-indigo-600 transition">User Roles</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition">About Us</a>
+                    <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition shadow-lg">Contact Sales</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-3 px-6 text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="#features" class="block py-3 px-6 text-gray-600 hover:bg-gray-100">Features</a>
+            <a href="#roles" class="block py-3 px-6 text-gray-600 hover:bg-gray-100">User Roles</a>
+            <a href="#about" class="block py-3 px-6 text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:bg-gray-100">Contact Sales</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 reveal">The Future of School Management is Here.</h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 reveal" style="transition-delay: 200ms;">
+                    tch7 offers a unified SaaS platform that provides schools with custom websites and dedicated apps, seamlessly connecting every member of your educational community.
+                </p>
+                <a href="#contact" class="bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-pink-600 transition-transform transform hover:scale-105 shadow-xl reveal" style="transition-delay: 400ms;">Request a Demo</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2 reveal">One Platform, Limitless Possibilities</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto reveal">Discover the powerful features that make tch7 the ultimate solution for modern educational institutions.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                        <div class="text-indigo-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Custom School Websites</h3>
+                        <p class="text-gray-600">We provide each client school with a beautifully designed, modern, and fully functional website that serves as a central hub for information and communication.</p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                         <div class="text-pink-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Dedicated Mobile Apps</h3>
+                        <p class="text-gray-600">Custom-built Android and iOS apps for every user role, ensuring everyone stays connected and informed on the go with push notifications and easy access.</p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                         <div class="text-green-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Secure Role-Based Logins</h3>
+                        <p class="text-gray-600">A comprehensive login system for every individual involved in the school, from Super Admin to Bus Drivers, each with their own tailored dashboard.</p>
+                    </div>
+                     <!-- Feature Card 4 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                         <div class="text-yellow-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Academic Management</h3>
+                        <p class="text-gray-600">Streamline attendance tracking, grade reporting, and assignment management. Teachers can easily update records, and parents can monitor progress in real-time.</p>
+                    </div>
+                     <!-- Feature Card 5 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                        <div class="text-red-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Instant Communication</h3>
+                        <p class="text-gray-600">A built-in messaging system and notification alerts for announcements, events, and emergencies, ensuring timely communication between all parties.</p>
+                    </div>
+                     <!-- Feature Card 6 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                        <div class="text-blue-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h8a1 1 0 001-1zM3 11h10" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Bus Tracking & Logistics</h3>
+                        <p class="text-gray-600">A dedicated login for bus drivers allows for real-time tracking, route management, and notifications to parents about bus location and timings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Roles Section -->
+        <section id="roles" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2 reveal">A Tailored Experience for Everyone</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto reveal">Our platform provides a unique, feature-rich dashboard for every role within the school ecosystem.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8 items-start reveal">
+                    <!-- Tabs -->
+                    <div id="role-tabs" class="w-full lg:w-1/4 flex lg:flex-col flex-wrap justify-center gap-2">
+                        <button data-role="student" class="tab-button active w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">🎓 Student</button>
+                        <button data-role="parent" class="tab-button w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">👨‍👩‍👧‍👦 Parent</button>
+                        <button data-role="teacher" class="tab-button w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">👩‍🏫 Teacher</button>
+                        <button data-role="staff" class="tab-button w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">💼 Staff</button>
+                        <button data-role="principal" class="tab-button w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">🏛️ Principal</button>
+                        <button data-role="busdriver" class="tab-button w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">🚌 Bus Driver</button>
+                        <button data-role="admin" class="tab-button w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">⚙️ Admin</button>
+                        <button data-role="superadmin" class="tab-button w-full text-left p-4 rounded-lg border-2 border-transparent font-semibold transition">👑 Super Admin</button>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="w-full lg:w-3/4 bg-white p-8 rounded-xl shadow-xl min-h-[300px]">
+                        <div id="role-content">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 reveal">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Our Team Collaborating" class="rounded-xl shadow-2xl w-full">
+                    </div>
+                    <div class="md:w-1/2 reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission: Simplifying Education Through Technology</h2>
+                        <p class="text-gray-600 mb-4">tch7 was founded with a simple yet powerful vision: to bridge the communication and management gaps in educational institutions. We believe that by providing the right tools, we can empower teachers to teach more effectively, enable parents to be more involved, and help students to focus on what truly matters - learning.</p>
+                        <p class="text-gray-600">Our team is composed of passionate educators, skilled developers, and innovative designers dedicated to creating a seamless, intuitive, and powerful platform that caters to the unique needs of every school we partner with.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-indigo-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your School?</h2>
+                    <p class="text-indigo-200 max-w-2xl mx-auto mb-8">Let's discuss how tch7 can be tailored to your institution's unique needs. Reach out to our sales team today to schedule a personalized demo and receive a quote.</p>
+                    <div class="bg-white text-gray-800 inline-block p-6 rounded-xl shadow-2xl">
+                        <p class="text-lg">For Sales Enquiries, contact us at:</p>
+                        <a href="mailto:postvnu@gmail.com" class="text-2xl font-bold text-indigo-600 hover:text-pink-600 transition-colors">postvnu@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-xl mb-2">tch7</p>
+            <p class="text-gray-400">&copy; <span id="year"></span> tch7. All Rights Reserved.</p>
+            <p class="text-gray-500 text-sm mt-2">Empowering Educational Communities Worldwide.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Header shrink on scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2');
+                    header.classList.remove('py-4');
+                } else {
+                    header.classList.add('py-4');
+                    header.classList.remove('py-2');
+                }
+            });
+
+            // Scroll Reveal Animation
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                revealElements.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - 100) {
+                        el.classList.add('visible');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Initial check
+
+            // Roles Tab Functionality
+            const roleData = {
+                student: {
+                    title: 'For the Modern Student 🎓',
+                    img: 'https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'View timetable and class schedule',
+                        'Access grades and report cards',
+                        'Submit assignments and homework',
+                        'Receive important announcements'
+                    ]
+                },
+                parent: {
+                    title: 'For the Involved Parent 👨‍👩‍👧‍👦',
+                    img: 'https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'Monitor child\'s attendance and grades',
+                        'Communicate directly with teachers',
+                        'Track school bus location in real-time',
+                        'Pay fees online securely'
+                    ]
+                },
+                teacher: {
+                    title: 'For the Dedicated Teacher 👩‍🏫',
+                    img: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'Manage attendance and enter grades',
+                        'Share assignments and resources',
+                        'Communicate with parents and students',
+                        'Organize class schedules and events'
+                    ]
+                },
+                staff: {
+                    title: 'For the Efficient Staff 💼',
+                    img: 'https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'Manage administrative tasks',
+                        'Access relevant school information',
+                        'Collaborate with other departments',
+                        'Handle library, finance, or other duties'
+                    ]
+                },
+                principal: {
+                    title: 'For the Visionary Principal 🏛️',
+                    img: 'https://images.pexels.com/photos/8363116/pexels-photo-8363116.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'Get a complete overview of school operations',
+                        'Monitor academic and administrative performance',
+                        'Communicate with the entire school community',
+                        'Generate comprehensive reports'
+                    ]
+                },
+                busdriver: {
+                    title: 'For the Reliable Bus Driver 🚌',
+                    img: 'https://images.pexels.com/photos/14510066/pexels-photo-14510066.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'View assigned routes and student lists',
+                        'Update bus status for real-time tracking',
+                        'Receive important alerts and notifications',
+                        'Mark student attendance on the bus'
+                    ]
+                },
+                admin: {
+                    title: 'For the Powerful Admin ⚙️',
+                    img: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'Manage all user accounts and roles',
+                        'Configure system settings and modules',
+                        'Oversee data management and security',
+                        'Provide technical support to users'
+                    ]
+                },
+                superadmin: {
+                    title: 'For the Ultimate Super Admin 👑',
+                    img: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',
+                    features: [
+                        'Manage multiple school branches',
+                        'Access global analytics and reports',
+                        'Control platform-wide settings',
+                        'Highest level of access and control'
+                    ]
+                }
+            };
+            
+            const roleTabsContainer = document.getElementById('role-tabs');
+            const roleContentContainer = document.getElementById('role-content');
+            
+            function updateRoleContent(role) {
+                const data = roleData[role];
+                roleContentContainer.innerHTML = `
+                    <div class="flex flex-col md:flex-row gap-8 items-center animate-fade-in">
+                        <div class="md:w-1/3">
+                            <img src="${data.img}" alt="${data.title}" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold mb-4">${data.title}</h3>
+                            <ul class="space-y-2">
+                                ${data.features.map(feature => `
+                                    <li class="flex items-start">
+                                        <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        <span class="text-gray-700">${feature}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            roleTabsContainer.addEventListener('click', (e) => {
+                if (e.target.matches('.tab-button')) {
+                    const role = e.target.dataset.role;
+                    // Update active button
+                    roleTabsContainer.querySelector('.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    // Update content
+                    updateRoleContent(role);
+                }
+            });
+
+            // Initial content load
+            updateRoleContent('student');
+
+            // Footer Year
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Add animation keyframes dynamically
+            const styleSheet = document.createElement("style");
+            styleSheet.type = "text/css";
+            styleSheet.innerText = `
+                @keyframes animate-fade-in {
+                    0% { opacity: 0; transform: translateY(10px); }
+                    100% { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fade-in {
+                    animation: animate-fade-in 0.5s ease-out forwards;
+                }
+            `;
+            document.head.appendChild(styleSheet);
+        });
+    </script>
+</body>
+</html>
